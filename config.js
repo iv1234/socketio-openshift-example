@@ -8,7 +8,7 @@ var Config = {
   "clientport": (process.env.OPENSHIFT_NODEJS_PORT) ? '8080':'8080',
   "protocol":   'ws://',
 
-  "heartbeattmo": 15000, // milliseconds 
+  "heartbeattmo": 30000, // milliseconds 
   
   "wsclientopts": { reconnection: true, 
                     reconnectionDelay: 2000,
