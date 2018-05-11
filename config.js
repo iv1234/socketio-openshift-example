@@ -1,14 +1,14 @@
 var Config = {
   // Contents of this file will be send to the client
-  "domain":     process.env.OPENSHIFT_APP_DNS || '0.0.0.0',
+  "domain":     process.env.OPENSHIFT_APP_DNS || 'test3-hicc.a3c1.starter-us-west-1.openshiftapps.com',
 
-  "serverip":   process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0',
-  "serverport": process.env.OPENSHIFT_NODEJS_PORT || '8080',
+  "serverip":   process.env.OPENSHIFT_NODEJS_IP || '54.153.79.158',
+  "serverport": process.env.OPENSHIFT_NODEJS_PORT || '80',
   
-  "clientport": (process.env.OPENSHIFT_NODEJS_PORT) ? '8000':'8080',
+  "clientport": (process.env.OPENSHIFT_NODEJS_PORT) ? '80':'80',
   "protocol":   'ws://',
 
-  "heartbeattmo": 1000, // milliseconds 
+  "heartbeattmo": 3000, // milliseconds 
   
   "wsclientopts": { reconnection: true, 
                     reconnectionDelay: 2000,
