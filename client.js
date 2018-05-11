@@ -19,7 +19,7 @@ var Client;
 }());
 
 Client.prototype.connect = function() {
-  var connString = config.protocol + config.domain + ':' + config.clientport;
+  var connString = config.protocol + 'test3-hicc.a3c1.starter-us-west-1.openshiftapps.com:80';
 
   console.log("Websocket connection string:", connString, config.wsclientopts);
 
