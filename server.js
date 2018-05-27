@@ -10,6 +10,10 @@ console.log("Trying to start server with config:", config.serverip + ":" + confi
 server.listen(config.serverport, config.serverip, function () {
   console.log("Server running @ http://" + config.serverip + ":" + config.serverport);
 });
+var proxy = require('express-http-proxy');
+ 
+app.use('/data', proxy('127.0.0.1:8081'));
+
 
 io.on('connection', function (socket) {
   serviceSocket = socket;
