@@ -25,7 +25,8 @@
   },
   "dependencies": {
     "socket.io":  "~1.0.1",
-    "express":    "~4.10.7"
+    "express":    "~4.10.7",
+    "express-http-proxy": ""
   },
   "devDependencies": {},
   "bundleDependencies": [],
