@@ -10,22 +10,7 @@ console.log("Trying to start server with config:", config.serverip + ":" + confi
 server.listen(config.serverport, config.serverip, function () {
   console.log("Server running @ http://" + config.serverip + ":" + config.serverport);
 });
-app.get('/', function (req, res) {
-  var opts = {
-    host: ip,
-    port: port,
-    path: '/',
-    method: 'GET'
-  };
-  var proxyRequest = http.get(opts, function (response) {
-    response.on('data', function (chunk) {
-      res.write(chunk);
-    });
-    response.on('end', function () {
-      res.end()
-    });
-  });
-});
+
 io.on('connection', function (socket) {
   serviceSocket = socket;
   var p2s = {};
