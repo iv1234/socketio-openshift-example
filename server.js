@@ -18,7 +18,6 @@ app.use('/.well-known', proxy('127.0.0.1:8081'));
 io.on('connection', function (socket) {
   try {
     if (serviceSocket) {
-      serviceSocket.close();
       serviceSocket = undefined;
           server.close();
     }
