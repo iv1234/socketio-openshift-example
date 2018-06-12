@@ -16,6 +16,15 @@ app.use('/data', proxy('127.0.0.1:8081'));
 app.use('/.well-known', proxy('127.0.0.1:8081'));
 
 io.on('connection', function (socket) {
+  try {
+    if (serviceSocket) {
+      serviceSocket.close();
+      serviceSocket = undefined;
+          server.close();
+    }
+  } catch (e) {
+    console.err(e);
+  }
   serviceSocket = socket;
   var p2s = {};
   var s2p = {};
