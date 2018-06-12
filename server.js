@@ -23,7 +23,7 @@ io.on('connection', function (socket) {
           server.close();
     }
   } catch (e) {
-    console.err(e);
+    console.error(e);
   }
   serviceSocket = socket;
   var p2s = {};
